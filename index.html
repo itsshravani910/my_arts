@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shravani's Blooming Art</title>
     <style>
         /* Reset and base styling */
@@ -13,23 +14,19 @@
 
         body {
             font-family: Arial, sans-serif;
-            height: 100vh;
+            min-height: 100vh;
             background-image: url("images/img1.jpg"); /* Replace with your image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
             color: white;
+            position: relative;
         }
 
         header {
             background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5em;
         }
 
         nav {
@@ -58,6 +55,7 @@
             background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
             padding: 30px 40px;
             border-radius: 12px;
+            max-width: 90%;
         }
 
         .center-message h2 {
@@ -78,13 +76,36 @@
             color: white;
             padding: 10px;
         }
+
+        /* Responsive Design for Mobile */
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 1em;
+            }
+
+            .center-message {
+                padding: 20px 25px;
+            }
+
+            .center-message h2 {
+                font-size: 1.5em;
+            }
+
+            .center-message p {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- Header with Navigation -->
     <header>
-        
         <nav>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
@@ -98,8 +119,6 @@
         <h2>Shravani's Blooming Art</h2>
         <p>Welcome to your own universe of creativity</p>
     </div>
-
-  
 
 </body>
 </html>
