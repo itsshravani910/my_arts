@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Blooming Art</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Segoe+UI&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf3e7;
+      color: #3e2723;
+    }
+
+    header {
+      background-color: #3e2723;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff8e1;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 20px;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffccbc;
+    }
+
+    .main-title {
+      text-align: center;
+      margin: 30px auto 20px;
+      font-size: 2.5em;
+      font-family: 'Great Vibes', cursive;
+      color: #8e3200;
+    }
+
+    .contact-section {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fffaf7;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-section h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      color: #8e3200;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #5d4037;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #d7ccc8;
+      border-radius: 5px;
+      font-size: 1em;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #8e3200;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #a84313;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #3e2723;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Form Section -->
+  <div class="contact-section">
+    <h2>Contact Me</h2> <!-- ← हाच heading ठेवलाय, "Get in Touch" नाही -->
+
+    <form action="#" method="post">
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="message">Your Message *</label>
+      <textarea id="message" name="message" required placeholder="Tell me what you'd like to order or inquire about..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Blooming Art. Created by Shravani Phutane.
+  </footer>
+
+</body>
+</html>
