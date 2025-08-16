@@ -83,6 +83,11 @@
 
         /* Responsive styles for smaller screens */
         @media (max-width: 600px) {
+            body {
+                background-size: auto 100%; /* Prevent zoom on mobile */
+                background-position: center top;
+            }
+
             nav a {
                 display: block;
                 margin: 10px 0;
@@ -91,6 +96,7 @@
 
             .center-message {
                 padding: 20px;
+                max-width: 95%;
             }
 
             .center-message h2 {
@@ -126,7 +132,7 @@
         <p>Welcome to your own universe of creativity</p>
     </div>
 
-    <!-- Optional Footer -->
+    <!-- Footer -->
     <footer>
         &copy; 2025 Shravani's Blooming Art. All rights reserved.
     </footer>
