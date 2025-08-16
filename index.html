@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shravani's Blooming Art</title>
   <style>
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -15,10 +14,11 @@
     body {
       font-family: 'Arial', sans-serif;
       min-height: 100vh;
-      background-image: url("images/img1.jpg"); /* Replace with your actual image path */
-      background-size: cover;
-      background-position: center;
+      background-image: url("images/img1.jpg"); /* use your correct path */
+      background-size: contain; /* important: shows entire image */
       background-repeat: no-repeat;
+      background-position: center;
+      background-color: #000; /* fills background if image doesn't cover full area */
       color: white;
       display: flex;
       flex-direction: column;
@@ -26,7 +26,7 @@
 
     header {
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 15px 20px;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -46,7 +46,7 @@
       color: #dbc8b6;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1em;
+      font-size: 1.1em;
     }
 
     nav a:hover {
@@ -60,19 +60,22 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.5);
       margin: 40px;
-      border-radius: 10px;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .center-message h2 {
-      font-size: 2em;
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
 
     .center-message p {
-      font-size: 1.2em;
+      font-size: 1.3em;
     }
 
     footer {
@@ -82,7 +85,6 @@
       font-size: 0.9em;
     }
 
-    /* Responsive design */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -92,8 +94,8 @@
       nav {
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 10px;
         gap: 10px;
+        margin-top: 10px;
       }
 
       .center-message {
@@ -102,7 +104,7 @@
       }
 
       .center-message h2 {
-        font-size: 1.5em;
+        font-size: 1.8em;
       }
 
       .center-message p {
@@ -113,7 +115,6 @@
 </head>
 <body>
 
-  <!-- Header with title and nav -->
   <header>
     <h1>Shravani's Blooming Art</h1>
     <nav>
@@ -124,13 +125,14 @@
     </nav>
   </header>
 
-  <!-- Center content -->
   <div class="center-message">
     <h2>Shravani's Blooming Art</h2>
     <p>Welcome to your own universe of creativity</p>
   </div>
 
-  
+  <footer>
+    &copy; 2025 Shravani's Blooming Art. All rights reserved.
+  </footer>
 
 </body>
 </html>
