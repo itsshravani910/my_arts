@@ -1,141 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shravani's Blooming Art</title>
-    <style>
-        /* Reset and base styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shravani's Blooming Art</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            background-image: url("images/img1.jpg"); /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            color: white;
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      background-image: url("images/img1.jpg"); /* Replace with your actual image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
 
-        header {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        header h1 {
-            font-size: 2.5em;
-        }
+    header h1 {
+      font-size: 1.8em;
+    }
 
-        nav {
-            margin-top: 10px;
-        }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
 
-        nav a {
-            color: #dbc8b6;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
+    nav a {
+      color: #dbc8b6;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        /* Centered message on image */
-        .center-message {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 30px 40px;
-            border-radius: 12px;
-            max-width: 90%;
-        }
+    .center-message {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin: 40px;
+      border-radius: 10px;
+    }
 
-        .center-message h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
+    .center-message h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
 
-        .center-message p {
-            font-size: 1.2em;
-        }
+    .center-message p {
+      font-size: 1.2em;
+    }
 
-        footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 10px;
-        }
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      font-size: 0.9em;
+    }
 
-        /* Responsive styles for smaller screens */
-        @media (max-width: 600px) {
-            body {
-                background-size: auto 100%; /* Prevent zoom on mobile */
-                background-position: center top;
-            }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-            nav a {
-                display: block;
-                margin: 10px 0;
-                font-size: 1em;
-            }
+      nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        gap: 10px;
+      }
 
-            .center-message {
-                padding: 20px;
-                max-width: 95%;
-            }
+      .center-message {
+        margin: 20px;
+        padding: 20px;
+      }
 
-            .center-message h2 {
-                font-size: 1.5em;
-            }
+      .center-message h2 {
+        font-size: 1.5em;
+      }
 
-            .center-message p {
-                font-size: 1em;
-            }
-
-            header h1 {
-                font-size: 2em;
-            }
-        }
-    </style>
+      .center-message p {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header with Navigation -->
-    <header>
-        <h1>Shravani's Blooming Art</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <!-- Header with title and nav -->
+  <header>
+    <h1>Shravani's Blooming Art</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Center Message on Background -->
-    <div class="center-message">
-        <h2>Shravani's Blooming Art</h2>
-        <p>Welcome to your own universe of creativity</p>
-    </div>
+  <!-- Center content -->
+  <div class="center-message">
+    <h2>Shravani's Blooming Art</h2>
+    <p>Welcome to your own universe of creativity</p>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 Shravani's Blooming Art. All rights reserved.
-    </footer>
+  
 
 </body>
 </html>
