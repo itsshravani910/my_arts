@@ -1,138 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shravani's Blooming Art</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Arial', sans-serif;
-      min-height: 100vh;
-      background-image: url("images/img1.jpg"); /* use your correct path */
-      background-size: contain; /* important: shows entire image */
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #000; /* fills background if image doesn't cover full area */
-      color: white;
-      display: flex;
-      flex-direction: column;
-    }
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
 
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.hero {
+  background-image: url("images/img1.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  color: white;
+}
 
-    header h1 {
-      font-size: 1.8em;
-    }
+/* Navbar styling */
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 0;
+  text-align: center;
+}
 
-    nav {
-      display: flex;
-      gap: 20px;
-    }
+nav a {
+  color: #ddbfa0;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
-    nav a {
-      color: #dbc8b6;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+/* Center text box */
+.center-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+}
 
-    .center-message {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin: 40px;
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.center-message h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
 
-    .center-message h2 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
+.center-message p {
+  font-size: 1.2rem;
+}
 
-    .center-message p {
-      font-size: 1.3em;
-    }
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  nav a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
 
-    footer {
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      font-size: 0.9em;
-    }
+  .center-message {
+    width: 90%;
+    padding: 20px;
+  }
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  .center-message h2 {
+    font-size: 2rem;
+  }
 
-      nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .center-message {
-        margin: 20px;
-        padding: 20px;
-      }
-
-      .center-message h2 {
-        font-size: 1.8em;
-      }
-
-      .center-message p {
-        font-size: 1em;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Shravani's Blooming Art</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <div class="center-message">
-    <h2>Shravani's Blooming Art</h2>
-    <p>Welcome to your own universe of creativity</p>
-  </div>
-
-  <footer>
-    &copy; 2025 Shravani's Blooming Art. All rights reserved.
-  </footer>
-
-</body>
-</html>
+  .center-message p {
+    font-size: 1rem;
+  }
+}
