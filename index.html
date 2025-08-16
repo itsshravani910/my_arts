@@ -19,14 +19,18 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: white;
             position: relative;
+            color: white;
         }
 
         header {
             background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
         }
 
         nav {
@@ -52,7 +56,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 30px 40px;
             border-radius: 12px;
             max-width: 90%;
@@ -77,19 +81,16 @@
             padding: 10px;
         }
 
-        /* Responsive Design for Mobile */
-        @media only screen and (max-width: 768px) {
-            header {
-                padding: 10px;
-            }
-
+        /* Responsive styles for smaller screens */
+        @media (max-width: 600px) {
             nav a {
-                margin: 0 8px;
+                display: block;
+                margin: 10px 0;
                 font-size: 1em;
             }
 
             .center-message {
-                padding: 20px 25px;
+                padding: 20px;
             }
 
             .center-message h2 {
@@ -99,6 +100,10 @@
             .center-message p {
                 font-size: 1em;
             }
+
+            header h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
@@ -106,6 +111,7 @@
 
     <!-- Header with Navigation -->
     <header>
+        <h1>Shravani's Blooming Art</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
@@ -119,6 +125,11 @@
         <h2>Shravani's Blooming Art</h2>
         <p>Welcome to your own universe of creativity</p>
     </div>
+
+    <!-- Optional Footer -->
+    <footer>
+        &copy; 2025 Shravani's Blooming Art. All rights reserved.
+    </footer>
 
 </body>
 </html>
