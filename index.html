@@ -13,9 +13,9 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-image: url("images/img1.jpg"); /* ✅ Your image */
+      background-image: url("images/home.jpg ");
       background-size: cover;
-      background-position: center;
+      background-position: center center;
       background-repeat: no-repeat;
       background-attachment: fixed;
       min-height: 100vh;
@@ -31,7 +31,7 @@
       flex-direction: row;
       flex-wrap: nowrap;
       gap: 30px;
-      background-color: rgba(0, 0, 0, 0.6);
+      /* Removed background-color for transparency */
       padding: 15px 10px;
       position: sticky;
       top: 0;
@@ -81,12 +81,47 @@
 
     /* ✅ Responsive Tweaks */
     @media (max-width: 768px) {
+      body {
+        background-size: cover; /* Match desktop */
+      }
+
       nav {
-        gap: 20px;
+        gap: 30px;
+        justify-content: center;
+        padding: 15px 10px;
       }
 
       .content-box {
-        padding: 20px 15px;
+        padding: 25px 18px;
+      }
+
+      .content-box h1 {
+        font-size: 2.3rem;
+      }
+
+      .content-box p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        background-size: cover; /* Keep same look as desktop */
+        background-position: center center;
+      }
+
+      nav {
+        gap: 25px;
+        padding: 12px 8px;
+        justify-content: center;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .content-box {
+        padding: 20px 12px;
       }
 
       .content-box h1 {
@@ -95,30 +130,6 @@
 
       .content-box p {
         font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      nav {
-        gap: 15px;
-        padding: 10px;
-        justify-content: flex-start;
-      }
-
-      nav a {
-        font-size: 0.95rem;
-      }
-
-      .content-box {
-        padding: 15px 10px;
-      }
-
-      .content-box h1 {
-        font-size: 1.6rem;
-      }
-
-      .content-box p {
-        font-size: 0.95rem;
       }
     }
   </style>

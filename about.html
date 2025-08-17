@@ -10,6 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Segoe+UI&display=swap" rel="stylesheet" />
 
   <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
     body {
       margin: 0;
       padding: 0;
@@ -20,28 +26,38 @@
 
     header {
       background-color: #3e2723;
-      padding: 20px 0;
+      padding:  0;
       text-align: center;
     }
 
+   
+     @media (max-width: 600px) {
     nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #fff8e1;
+       height: 50px; 
+      padding:  10px;
+      text-align: center;
+       align-items: center; 
+        justify-content: center;
+            background-color: #3b2f2f;
+      }
+}
+nav a {
+      color:  #d4b996;
+      display: inline-block;
+      margin: 0.20px ;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 20px;
-      font-size: 1.2em;
+      margin: 8px 0;
+      font-size: 1rem;
       transition: color 0.3s;
+       line-height: 1; /* ✅ line-height कमी केली */
+  padding: 4px 10px; /* कमी padding */
     }
 
     nav a:hover {
-      color: #ffccbc;
-    }
+      color:  #f0e6d2;
+  }
+   
 
     /* Main heading - "Shravani's Blooming Art" */
     .main-title {
