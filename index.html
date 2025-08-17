@@ -13,20 +13,22 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-image: url("images/img11.jpg"); /* ✅ Your image */
-      background-size: cover; /* ✅ Perfect fit without zoom */
+      background-image: url("images/img1.jpg"); /* ✅ Your image */
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
       min-height: 100vh;
       color: white;
+      display: flex;
+      flex-direction: column;
     }
 
     nav {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: row; /* ✅ Always horizontal */
+      flex-direction: row;
       flex-wrap: nowrap;
       gap: 30px;
       background-color: rgba(0, 0, 0, 0.6);
@@ -34,7 +36,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      overflow-x: auto; /* ✅ Allows scroll if screen too narrow */
+      overflow-x: auto;
     }
 
     nav a {
@@ -50,10 +52,18 @@
       color: #ffffff;
     }
 
+    .main-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
     .content-box {
       background-color: rgba(0, 0, 0, 0.7);
       max-width: 600px;
-      margin: 80px auto;
+      width: 100%;
       padding: 30px 20px;
       border-radius: 20px;
       text-align: center;
@@ -76,7 +86,6 @@
       }
 
       .content-box {
-        margin: 60px 15px;
         padding: 20px 15px;
       }
 
@@ -93,7 +102,7 @@
       nav {
         gap: 15px;
         padding: 10px;
-        justify-content: flex-start; /* ✅ Keep horizontal scroll for overflow */
+        justify-content: flex-start;
       }
 
       nav a {
@@ -101,7 +110,6 @@
       }
 
       .content-box {
-        margin: 50px 10px;
         padding: 15px 10px;
       }
 
@@ -115,7 +123,7 @@
     }
   </style>
 </head>
-<body> 
+<body>
   <header>
     <nav>
       <a href="index.html">Home</a>
@@ -125,9 +133,11 @@
     </nav>
   </header>
 
-  <div class="content-box">
-    <h1>Shravani's Blooming Art</h1>
-    <p>Welcome to your own universe of creativity</p>
+  <div class="main-container">
+    <div class="content-box">
+      <h1>Shravani's Blooming Art</h1>
+      <p>Welcome to your own universe of creativity</p>
+    </div>
   </div>
 </body>
 </html>
