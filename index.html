@@ -1,82 +1,126 @@
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shravani's Blooming Art</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body, html {
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("images/img1.jpg"); /* ✅ Your image */
+      background-size: cover; /* ✅ Perfect fit without zoom */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: white;
+    }
 
-.hero {
-  background-image: url("images/img1.jpg"); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* Full viewport height */
-  position: relative;
-  color: white;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row; /* ✅ Always horizontal */
+      flex-wrap: nowrap;
+      gap: 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-/* Navbar styling */
-header {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px 0;
-  text-align: center;
-}
+    nav a {
+      color: #e8c39e;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
 
-nav a {
-  color: #ddbfa0;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
+    nav a:hover {
+      color: #ffffff;
+    }
 
-nav a:hover {
-  text-decoration: underline;
-}
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 30px 20px;
+      border-radius: 20px;
+      text-align: center;
+    }
 
-/* Center text box */
-.center-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 30px 40px;
-  border-radius: 15px;
-  text-align: center;
-}
+    .content-box h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
 
-.center-message h2 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
+    .content-box p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
 
-.center-message p {
-  font-size: 1.2rem;
-}
+    /* ✅ Responsive Tweaks */
+    @media (max-width: 768px) {
+      nav {
+        gap: 20px;
+      }
 
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  nav a {
-    margin: 0 10px;
-    font-size: 1rem;
-  }
+      .content-box {
+        margin: 60px 15px;
+        padding: 20px 15px;
+      }
 
-  .center-message {
-    width: 90%;
-    padding: 20px;
-  }
+      .content-box h1 {
+        font-size: 2rem;
+      }
 
-  .center-message h2 {
-    font-size: 2rem;
-  }
+      .content-box p {
+        font-size: 1rem;
+      }
+    }
 
-  .center-message p {
-    font-size: 1rem;
-  }
-}
+    @media (max-width: 480px) {
+      nav {
+        gap: 15px;
+        padding: 10px;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+      }
+
+      .content-box h1 {
+        font-size: 1.7rem;
+      }
+
+      .content-box p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="content-box">
+    <h1>Shravani's Blooming Art</h1>
+    <p>Welcome to your own universe of creativity</p>
+  </div>
+
+</body>
+</html>
