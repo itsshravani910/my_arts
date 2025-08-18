@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shravani's Blooming Art</title>
   <style>
     * {
@@ -13,117 +13,104 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-image: url("images/a.jpg");
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      min-height: 100vh;
-      color: white;
-      display: flex;
-      flex-direction: column;
+      background-color: #fff;
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: 30px;
-      /* Removed background-color for transparency */
-      padding: 15px 10px;
-      position: fixed ,center;
-      
-      top: 0;
-      z-index: 1000;
-      overflow-x: auto;
+    header {
+      background-color: #3d2b1f;
+      padding: 20px 0;
+      text-align: center;
     }
 
     nav a {
-      color: #e8c39e;
+      color: #f7d9b0;
+      margin: 0 15px;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 18px;
       font-weight: bold;
-      transition: color 0.3s ease;
-      white-space: nowrap;
     }
 
     nav a:hover {
-      color: #ffffff;
+      text-decoration: underline;
     }
 
-    
-
-   
-
-    
-
-    /* ✅ Responsive Tweaks */
-    @media (max-width: 768px) {
-      body {
-        background-size: cover; /* Match desktop */
-      }
-
-      nav {
-        gap: 30px;
-        justify-content: center;
-        padding: 15px 10px;
-      }
-z
-      .content-box {
-        padding: 25px 18px;
-      }
-
-      .content-box h1 {
-        font-size: 2.3rem;
-      }
-
-      .content-box p {
-        font-size: 1.1rem;
-      }
+    .hero-section {
+      width: 100%;
+      height: 100vh;
+      background-image: url("images/pqr.jpg"); /* your actual image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
 
-    @media (max-width: 480px) {
-      body {
-        background-size: cover; /* Keep same look as desktop */
-        background-position: center center;
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      border-radius: 15px;
+      color: white;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    .hero-overlay h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay p {
+      font-size: 20px;
+    }
+
+    footer {
+      background-color: #3d2b1f;
+      color: #f7d9b0;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 600px) {
+      .hero-overlay h1 {
+        font-size: 28px;
       }
 
-      nav {
-        gap: 25px;
-        padding: 12px 8px;
-        justify-content: center;
+      .hero-overlay p {
+        font-size: 16px;
       }
 
       nav a {
-        font-size: 1rem;
-      }
-
-      .content-box {
-        padding: 20px 12px;
-      }
-
-      .content-box h1 {
-        font-size: 2rem;
-      }
-
-      .content-box p {
-        font-size: 1rem;
+        font-size: 16px;
+        margin: 0 10px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <h1>Shravani's Blooming Art</h1>
+      <p>Welcome to your own universe of creativity</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 MLAA - Shravani's Blooming Art. All rights reserved.
+  </footer>
 
 </body>
 </html>
